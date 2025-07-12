@@ -1,0 +1,2 @@
+create_subdirectory_options(SREELANG TOOL)
+add_sreelang_subdirectory(driver)

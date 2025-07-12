@@ -1,0 +1,10 @@
+set(LLVM_LINK_COMPONENTS
+Support
+)
+add_sreelang_tool(sreelang
+Driver.cpp
+)
+target_link_libraries(sreelang
+PRIVATE
+sreelangBasic
+)
