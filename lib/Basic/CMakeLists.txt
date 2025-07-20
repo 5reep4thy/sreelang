@@ -1,3 +1,9 @@
 add_sreelang_library(sreelangBasic
   Version.cpp
+  Lexer.cpp
+  Parser.cpp
+  Sema.cpp
+  CodeGen.cpp
+  rtcalc.c
   )
+link_directories("/Users/sreepathyjayanand/Documents/code/llvm-project/llvm-12/lib")

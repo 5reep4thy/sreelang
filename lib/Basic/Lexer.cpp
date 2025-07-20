@@ -1,9 +1,8 @@
-#include "Lexer.h"
+#include "sreelang/Basic/Lexer.h"
 
 namespace charinfo {
 LLVM_READNONE inline bool isWhitespace(char c) {
-    return c == ' ' || c == '\t' || c == '\f' || c == '\v' || c == '\r' ||
-           c == '\n';
+    return c == ' ' || c == '\t' || c == '\f' || c == '\v' || c == '\r' || c == '\n';
 }
 
 LLVM_READNONE inline bool isDigit(char c) {
@@ -41,9 +40,9 @@ void Lexer::next(Token& token) {
     }
     else {
         switch (*BufferPtr) {
-#define CASE(ch, tok)                                                          \
-    case ch:                                                                   \
-        formToken(token, BufferPtr + 1, tok);                                  \
+#define CASE(ch, tok)                                                                              \
+    case ch:                                                                                       \
+        formToken(token, BufferPtr + 1, tok);                                                      \
         break
             CASE('+', Token::plus);
             CASE('-', Token::minus);

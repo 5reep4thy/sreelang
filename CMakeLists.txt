@@ -8,6 +8,7 @@ include(AddLLVM)
 include(HandleLLVMOptions)
 include_directories("${LLVM_BINARY_DIR}/include" "${LLVM_INCLUDE_DIR}")
 link_directories("${LLVM_LIBRARY_DIR}")
+llvm_map_components_to_libnames(llvm_libs Core)
 set(SREELANG_BUILT_STANDALONE 1)
 endif()
 

@@ -5,8 +5,11 @@ Language: Cpp
 # Force pointers to the type for C++.
 DerivePointerAlignment: false
 PointerAlignment: Left
+ReferenceAlignment: Left
+ColumnLimit: 100
+AlignAfterOpenBracket: Align
 # BraceWrappingAfterControlStatementStyle AfterControlStatement: BWACS_Never
 BreakBeforeBraces: Custom
 BraceWrapping:
     BeforeElse: true
-AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortFunctionsOnASingleLine: None
